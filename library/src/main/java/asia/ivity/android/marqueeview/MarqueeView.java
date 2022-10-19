@@ -322,9 +322,9 @@ public class MarqueeView extends LinearLayout {
     }
 
     private void cutTextView() {
-        if (mTextField.getWidth() != getMeasuredWidth()) {
+        if (mTextField.getWidth() != ViewGroup.LayoutParams.MATCH_PARENT) {
             ViewGroup.LayoutParams lp = mTextField.getLayoutParams();
-            lp.width = getMeasuredWidth();
+            lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
             mTextField.setLayoutParams(lp);
         }
     }
